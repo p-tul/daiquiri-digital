@@ -1,0 +1,53 @@
+{
+  "name": "daiquiri-digital",
+  "private": true,
+  "description": "Australia based, hospitality focused digital agency specialising in web design and development, content management, google analytics and SEO.",
+  "version": "0.1.0",
+  "author": "Patrick Tully @p-tul",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.15.29",
+    "gatsby-background-image": "^0.8.15",
+    "gatsby-image": "^2.2.24",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-offline": "^3.0.11",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sharp": "^2.2.28",
+    "gatsby-plugin-styled-components": "^3.1.11",
+    "gatsby-plugin-typography": "^2.3.14",
+    "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-transformer-remark": "^2.6.30",
+    "gatsby-transformer-sharp": "^2.2.20",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.19",
+    "styled-components": "^4.4.0",
+    "typography": "^0.16.19",
+    "typography-theme-funston": "^0.16.19",
+    "typography-theme-grand-view": "^0.16.19"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
