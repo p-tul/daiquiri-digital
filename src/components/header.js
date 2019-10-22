@@ -72,9 +72,9 @@ const Header = ({ siteTitle }) => (
         <NavItem>
           <NavLink to="/pricing">Pricing</NavLink>
         </NavItem>
-        {/* <NavItem>
+        <NavItem>
           <NavLink to="/blog">Blog</NavLink>
-        </NavItem> */}
+        </NavItem>
         <NavItem>
           <NavLink to="/contact">Contact</NavLink>
         </NavItem>
