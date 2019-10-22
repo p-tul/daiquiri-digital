@@ -25,8 +25,8 @@ const ServiceCard = styled.div`
 		-webkit-box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
 		-moz-box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
 		box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
-	
 	}
+
 	h4 {
 		margin-bottom: 0.2rem;
 	}
