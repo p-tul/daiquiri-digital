@@ -5,7 +5,7 @@ updated: '2019-10-15'
 author: Patrick Tully
 published: true
 path: '/5-things-to-check-if-you-run-a-venue'
-featuredImage: '../../images/hats.jpg'
+featuredImage: 'hats.jpg'
 ---
 # 5 Digital Must-Haves If You Run A Venue 
  
