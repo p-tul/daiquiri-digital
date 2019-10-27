@@ -44,19 +44,18 @@ const PricingPage = () => (
           <li>Add Mobile Responsiveness</li>
           <li>Check SEO Best Practices</li>
           <li>Organise Google Profile</li>
-          <li>Add to Local Venue Directories</li>
           <li>Manage Email &amp; Hosting</li>
         </PricingCard>
         <PricingCard
           title="Start-Up"
           price="750"
         >
-          <li>Pages: 5</li>
+          <li>5 Page Website</li>
           <li>Custom Layout & Design</li>
           <li>Mobile Responsive</li>
           <li>SEO Ready</li>
           <li>Email</li>
-          <li>Mailing List Capture</li>
+          <li>Mailing List Capture*</li>
           <li>CMS</li>
           <li>Social Media Links</li>
         </PricingCard>

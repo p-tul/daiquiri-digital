@@ -73,19 +73,19 @@ const WorkPage = () => (
         </StyledHeader>
         <PortfolioWrapper>
             <PortfilioItem>
-                <a href="http://www.kurrajonghotel.com.au" target="_blank" >
+                <a href="http://www.kurrajonghotel.com.au" target="_blank" rel="noopener noreferrer" >
                     <img src={KurraMockup} alt="Kurrajong Hotel" />
                 </a>
                 <h2>Kurrajong Hotel</h2>
             </PortfilioItem>
             <PortfilioItem>
-                <a href="https://www.cindavies.com/" target="_blank" >
+                <a href="https://www.cindavies.com/" target="_blank" rel="noopener noreferrer" >
                     <img src={CinDavies} alt="Cin Davies" />
                 </a>
                 <h2>Cin Davies</h2>
             </PortfilioItem>
             <PortfilioItem>
-                <a href="https://p-tul.github.io/bridgelane/" target="_blank" >
+                <a href="https://p-tul.github.io/bridgelane/" target="_blank" rel="noopener noreferrer" >
                     <img src={BridgeLane} alt="Bridge Lane" />
                 </a>
                 <h2>Bridge Lane</h2>
