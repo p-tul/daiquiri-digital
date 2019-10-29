@@ -10,7 +10,7 @@ import Button from "../components/button"
 import ContactBanner from "../components/contactBanner"
 
 // IMAGES
-import BackgroundImg from "../images/showcase-banner.png"
+import BackgroundImg from "../images/showcase-img.png"
 import MockUp from "../images/bridge-lane-mockup.png"
 import HealthCheck from "../images/icons/health-check.png"
 import WebDesign from "../images/icons/design.png"
@@ -21,18 +21,24 @@ import WorkExample from '../images/kurrajong-hotel-mockup-2.png'
 
 // STYLED COMPONENTS
 const Showcase = styled.div`
-  background: url(${BackgroundImg}) bottom center no-repeat;
-  height: 628px;
+  background: url(${BackgroundImg}) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 100px);
   padding: 4rem 2rem;
   h1 {
-    width: 50%;
+    padding-top: 8rem;
+    font-size: 5rem;
+    font-weight: bold;
+    font-style: italic;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
+    height: 50vh;
     h1 {
-      font-size: 1.4rem;
+      padding-top: 1rem;
+      font-size: 3rem;
     }
-    padding: 16rem 0;
   }
 `
 
@@ -109,14 +115,11 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title={data.site.siteMetadata.title} />
 
-    {/* <Showcase>
+    <Showcase>
       <Container>
-        <h1>Hospitality focused Digital Design Agency</h1>
-        <Button path="/about" text="Explore Our Work" />
+        <h1><span style={{color: "#7ed957"}}>Hospitality</span><br/>Web Design</h1>
       </Container>
-    </Showcase> */}
-
-    <img src={BackgroundImg} alt="Showcase Image" style={{margin: "3rem 0"}} />
+    </Showcase>
 
     <About>
       <Container>
@@ -128,7 +131,7 @@ const IndexPage = ({ data }) => (
               <h2>Boutique Web Design Agency</h2>
               <p>
                 Whether you are just starting and need a new website or you want
-                to improve your current site, we understand the requirments of
+                to improve your current site, we understand the requirements of
                 small business and ensure you put your best foot forward online.
               </p>
               <p>
@@ -167,6 +170,7 @@ const IndexPage = ({ data }) => (
             <h5>SEO</h5>
           </div>
         </div>
+        <br/>
         <Button path="/pricing" text="View Pricing" />
       </Container>
     </Services>
@@ -180,6 +184,7 @@ const IndexPage = ({ data }) => (
             <p>
               We are very proud of work so we shamelessly show it off and we'd love to show you off too. 
             </p>
+            <br/>
             <Button path="/work" text="View Portfolio" />
           </div>
         </div>
@@ -192,6 +197,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
+    
     site {
       siteMetadata {
         title

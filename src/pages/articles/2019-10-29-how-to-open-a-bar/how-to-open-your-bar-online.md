@@ -1,10 +1,11 @@
 ---
 title: 'How To Open A Bar Online'
-date: ''
-updated: ''
+date: '2019-10-15'
+updated: '2019-10-15'
 author: Patrick Tully
 published: false
-path: '/second-post'
+path: '/how-to-open-a-bar-online'
+featuredImage: './hats.jpg'
 ---
 
 # How to Open A Bar (Online)

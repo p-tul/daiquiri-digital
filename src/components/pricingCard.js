@@ -13,7 +13,7 @@ const Card = styled.ul`
         margin: 0;
         padding: 1rem;
     }
-    li:nth-last-of-type(even) {
+    li:nth-of-type(even) {
         background: #e9e9e9;
     }
     .sub-header {

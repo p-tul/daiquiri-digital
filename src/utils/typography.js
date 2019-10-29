@@ -1,9 +1,13 @@
-import Typography from 'typography'
-import Theme from 'typography-theme-grand-view'
-const typography = new Typography(Theme)
+import Typography from "typography"
 
-Theme.baseFontSize = "24px";
-Theme.baseLineHeight = "1.6";
+const typography = new Typography({
+  baseFontSize: "18px",
+  baseLineHeight: 1.666,
+  headerFontFamily: [
+    "Roboto Mono",
+    "sans-serif",
+  ],
+  bodyFontFamily: ["Lora", "serif"],
+})
 
-export const { scale, rhythm, options } = typography
 export default typography

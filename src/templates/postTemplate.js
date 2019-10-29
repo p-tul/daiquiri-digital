@@ -34,7 +34,8 @@ export default function PostTemplate({ data }) {
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <Container>
         <div>
-          <Img fluid={featuredImgFluid} style={{height: "400px", width: "100%"}}/>
+          <Img fluid={featuredImgFluid} style={{maxHeight: "400px", width: "100%"}}/>
+          {/* <div dangerouslySetInnerHTML={{ __html: post.tableOfContents}} /> */}
           <Blog dangerouslySetInnerHTML={{ __html: post.html }} />
           <h6 style={{ paddingLeft: "2rem" }}>
             Posted by {post.frontmatter.author} on {post.frontmatter.date}
@@ -50,6 +51,10 @@ export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      tableOfContents (
+        pathToSlugField: "frontmatter.path"
+        maxDepth: 2
+      )
       frontmatter {
         path
         title

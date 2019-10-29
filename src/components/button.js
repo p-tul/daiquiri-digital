@@ -15,6 +15,7 @@ const StyledLink = styled(Link)`
         color: white;
         background: #333;
         border-color: #333;
+        text-decoration: none;
     }
 `
 

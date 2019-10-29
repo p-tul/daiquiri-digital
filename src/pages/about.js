@@ -15,13 +15,13 @@ const ServiceCard = styled.div`
 	display: grid;
 	padding-bottom: 3rem;
 	grid-template-columns: auto auto auto auto;
-	grid-gap: 1rem;
+	grid-gap: 1.5rem 1rem;
 	text-align: center;
 	div {
 		background: #fefefe;
 		border-radius: 0.5rem;
 		border: 2px solid #ccc;
-		padding: 0.8rem;
+		padding: 1.4rem 0.8rem;
 		-webkit-box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
 		-moz-box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
 		box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);

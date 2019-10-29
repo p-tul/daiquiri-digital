@@ -10,11 +10,14 @@ import Container from "./container"
 import Logo from "../images/dd-logo-main-md.png"
 
 // STYLED COMPONENTS
+
+
 const StyledHeader = styled.header`
   background: white;
   margin-bottom: 0;
 
   @media (max-width: 768px) {
+    
   }
 `
 
@@ -31,8 +34,20 @@ const NavList = styled.ul`
   list-style: none;
   float: right;
   line-height: 50px;
+  transition: all 1000ms;
 
   @media (max-width: 768px) {
+    display: none;
+    z-index: 5;
+    margin: 0;
+    padding: 5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
 
   }
 `
@@ -42,6 +57,7 @@ const NavItem = styled.li`
   margin-right: 1rem;
 
   @media (max-width: 768px) {
+    display: block;
   }
 `
 
@@ -51,6 +67,17 @@ const NavLink = styled(Link)`
   padding: 4px;
 `
 
+const ToggleBtn = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    
+  }
+`
+
+
+
+
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
@@ -58,7 +85,6 @@ const Header = ({ siteTitle }) => (
       <Link to="/">
         <LogoLink src={Logo} alt="Daiquiri Digital Logo" />
       </Link>
-
       <NavList>
         <NavItem>
           <NavLink to="/">Home</NavLink>
@@ -79,6 +105,11 @@ const Header = ({ siteTitle }) => (
           <NavLink to="/contact">Contact</NavLink>
         </NavItem>
       </NavList>
+      {/* <div>
+        <input type="checkbox" />
+
+      </div> */}
+
 
     </Container>
   </StyledHeader>
