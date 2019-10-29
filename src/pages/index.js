@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 // COMPONENTS
 import Layout from "../components/layout"
@@ -17,7 +18,7 @@ import WebDesign from "../images/icons/design.png"
 import MailingList from "../images/icons/mail-list.png"
 import Cms from "../images/icons/cms.png"
 import Seo from "../images/icons/seo.png"
-import WorkExample from '../images/kurrajong-hotel-mockup-2.png'
+import WorkExample from "../images/kurrajong-hotel-mockup-2.png"
 
 // STYLED COMPONENTS
 const Showcase = styled.div`
@@ -40,6 +41,12 @@ const Showcase = styled.div`
       font-size: 3rem;
     }
   }
+
+  @media (max-width: 428px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
 `
 
 const About = styled.div`
@@ -52,14 +59,14 @@ const About = styled.div`
   }
 
   @media (max-width: 1024px) {
-	  .flex {
-		  flex-direction: column;
-	  }
-	  .body {
-		  text-align: center;
-		  margin: 0;
-		  padding: 2rem;
-	  }
+    .flex {
+      flex-direction: column;
+    }
+    .body {
+      text-align: center;
+      margin: 0;
+      padding: 2rem;
+    }
   }
 `
 
@@ -68,12 +75,12 @@ const Services = styled.div`
   padding: 4rem 0;
   .serviceCards {
     display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   .serviceCard {
-	width: 150px;
-	margin: 0 0.5rem;
+    width: 150px;
+    margin: 0 0.5rem;
   }
 `
 
@@ -109,38 +116,40 @@ const Work = styled.div`
   }
 `
 
-
-
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title={data.site.siteMetadata.title} />
 
     <Showcase>
       <Container>
-        <h1><span style={{color: "#7ed957"}}>Hospitality</span><br/>Web Design</h1>
+        <h1>
+          <span style={{ color: "#7ed957" }}>Hospitality</span>
+          <br />
+          Web Design
+        </h1>
       </Container>
     </Showcase>
 
     <About>
       <Container>
-          <div className="flex">
-            <div>
-              <img src={MockUp} alt="website mockup" />
-            </div>
-            <div className="body">
-              <h2>Boutique Web Design Agency</h2>
-              <p>
-                Whether you are just starting and need a new website or you want
-                to improve your current site, we understand the requirements of
-                small business and ensure you put your best foot forward online.
-              </p>
-              <p>
-                We specialise in all forms of hospitality business and know what
-                is involved in separating your business from the rest.
-              </p>
-              <p>You take care of your guests and we'll take care of you.</p>
-            </div>
+        <div className="flex">
+          <div>
+            <img src={MockUp} alt="website mockup" />
           </div>
+          <div className="body">
+            <h2>Boutique Web Design Agency</h2>
+            <p>
+              Whether you are just starting and need a new website or you want
+              to improve your current site, we understand the requirements of
+              small business and ensure you put your best foot forward online.
+            </p>
+            <p>
+              We specialise in all forms of hospitality business and know what
+              is involved in separating your business from the rest.
+            </p>
+            <p>You take care of your guests and we'll take care of you.</p>
+          </div>
+        </div>
       </Container>
     </About>
 
@@ -170,7 +179,7 @@ const IndexPage = ({ data }) => (
             <h5>SEO</h5>
           </div>
         </div>
-        <br/>
+        <br />
         <Button path="/pricing" text="View Pricing" />
       </Container>
     </Services>
@@ -178,13 +187,14 @@ const IndexPage = ({ data }) => (
     <Work>
       <Container>
         <div className="WorkWrapper">
-          <img src={WorkExample} alt="Portfolio Example"/>
+          <img src={WorkExample} alt="Portfolio Example" />
           <div className="WorkTextWrapper">
             <h2>Some of Our Happy Customers</h2>
             <p>
-              We are very proud of work so we shamelessly show it off and we'd love to show you off too. 
+              We are very proud of work so we shamelessly show it off and we'd
+              love to show you off too.
             </p>
-            <br/>
+            <br />
             <Button path="/work" text="View Portfolio" />
           </div>
         </div>
@@ -192,12 +202,12 @@ const IndexPage = ({ data }) => (
     </Work>
 
     <ContactBanner />
+    <Img fixed={data.healthCheck.childImageSharp.fixed} />
   </Layout>
 )
 
-export const query = graphql`
+export const metaQuery = graphql`
   query {
-    
     site {
       siteMetadata {
         title
@@ -206,4 +216,21 @@ export const query = graphql`
   }
 `
 
-export default IndexPage;
+export const serviceImgQuery = graphql`
+  query {
+    healthCheck: allFile(filter: { base: { eq: "health-check.png" } }) {
+      edges {
+        node {
+          base
+          childImageSharp {
+            fixed(width: 150) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+export default IndexPage
