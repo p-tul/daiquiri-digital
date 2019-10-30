@@ -26,25 +26,32 @@ const Showcase = styled.div`
   background-size: cover;
   width: 100%;
   height: calc(100vh - 100px);
-  padding: 4rem 2rem;
   h1 {
-    padding-top: 8rem;
+    padding-top: 12rem;
     font-size: 5rem;
     font-weight: bold;
     font-style: italic;
   }
 
   @media (max-width: 768px) {
-    height: 50vh;
+    height: 30vh;
     h1 {
       padding-top: 1rem;
       font-size: 3rem;
     }
   }
 
+  @media (max-width: 655px) {
+    h1 {
+      font-size: 2.5rem;
+      padding-top: 2rem;
+    }
+  }
+
   @media (max-width: 428px) {
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
+      padding-top: 4rem;
     }
   }
 `
@@ -60,7 +67,7 @@ const About = styled.div`
 
   @media (max-width: 1024px) {
     .flex {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     .body {
       text-align: center;
@@ -202,7 +209,6 @@ const IndexPage = ({ data }) => (
     </Work>
 
     <ContactBanner />
-    <Img fixed={data.healthCheck.childImageSharp.fixed} />
   </Layout>
 )
 
@@ -216,21 +222,6 @@ export const metaQuery = graphql`
   }
 `
 
-export const serviceImgQuery = graphql`
-  query {
-    healthCheck: allFile(filter: { base: { eq: "health-check.png" } }) {
-      edges {
-        node {
-          base
-          childImageSharp {
-            fixed(width: 150) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
-  }
-`
+
 
 export default IndexPage

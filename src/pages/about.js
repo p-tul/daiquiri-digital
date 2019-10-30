@@ -8,7 +8,7 @@ import Container from '../components/container'
 import ContactBanner from '../components/contactBanner'
 
 // IMAGES
-import Banner from '../images/insta-food.jpg'
+import Banner from '../images/citrus-cocktail.jpg'
 
 // STYLED COMPONENTS
 const ServiceCard = styled.div`
@@ -54,11 +54,8 @@ const AboutPage = () => (
 			</p>
 		</div>
 		
-	</Container>
-
-	<img src={Banner} alt="insta-food" />
+	<img src={Banner} alt="" />
 	
-	<Container>
 		<div
 			style={{
 				textAlign: 'center'

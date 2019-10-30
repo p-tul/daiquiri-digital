@@ -7,17 +7,8 @@ import Button from './button'
 
 const Contact = styled.div`
   text-align: center;
-  background: #6271ff;
-  color: white!important;
+  background: #ffd22e;
   padding: 3rem;
-  a {
-      color: white;
-      border-color: white;
-  }
-  a:hover {
-      border-color: white;
-      background: rgba(255, 255, 255, 0.1);
-  }
 `
 
 const contactBanner = () => {

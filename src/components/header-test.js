@@ -12,6 +12,10 @@ const LogoLink = styled.img`
   @media (max-width: 768px) {
     margin: 0 auto;
   }
+
+  @media (max-width: 350px) {
+    height: 40px;
+  }
 `
 
 const NavLink = styled(Link)`

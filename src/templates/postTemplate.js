@@ -36,6 +36,7 @@ export default function PostTemplate({ data }) {
         <div>
           <Img fluid={featuredImgFluid} style={{maxHeight: "400px", width: "100%"}}/>
           {/* <div dangerouslySetInnerHTML={{ __html: post.tableOfContents}} /> */}
+          <h1 style={{textAlign: "center", marginTop: "3rem"}}>{post.frontmatter.title}</h1>
           <Blog dangerouslySetInnerHTML={{ __html: post.html }} />
           <h6 style={{ paddingLeft: "2rem" }}>
             Posted by {post.frontmatter.author} on {post.frontmatter.date}

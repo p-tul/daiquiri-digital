@@ -4,18 +4,16 @@ date: '2019-10-15'
 updated: '2019-10-15'
 author: Patrick Tully
 published: true
-path: '/5-things-to-check-if-you-run-a-venue'
-featuredImage: './hats.jpg'
----
-# 5 Digital Must-Haves If You Run A Venue 
- 
+path: '/blog/5-things-to-check-if-you-run-a-venue'
+featuredImage: './bar.jpg'
+--- 
 Running a venue is a tough job and managers often find themselves wearing more than one hat. If you want to give your business a digital health check, I've put together a list of essentials that you should check to make sure your online presence is as good as your drinks/service.
 
-1.	[Website](#website)
+<!-- 1.	[Website](#website)
 1.	[Email List](#email-list)
 1.	[Google Profile](#google-profile)
 1.	[Social Media](#social-media)
-1.	[Local Venue Directories](#local-venue-directories)
+1.	[Local Venue Directories](#local-venue-directories) -->
 
 ---
  

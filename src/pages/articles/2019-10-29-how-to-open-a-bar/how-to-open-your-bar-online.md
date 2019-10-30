@@ -4,7 +4,7 @@ date: '2019-10-15'
 updated: '2019-10-15'
 author: Patrick Tully
 published: false
-path: '/how-to-open-a-bar-online'
+path: '/blog/how-to-open-a-bar-online'
 featuredImage: './hats.jpg'
 ---
 
