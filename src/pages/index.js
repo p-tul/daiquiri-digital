@@ -12,7 +12,7 @@ import ContactBanner from "../components/contactBanner"
 
 // IMAGES
 import BackgroundImg from "../images/showcase-img.png"
-import MockUp from "../images/bridge-lane-mockup.png"
+// import MockUp from "../images/bridge-lane-mockup.png"
 import HealthCheck from "../images/icons/health-check.png"
 import WebDesign from "../images/icons/design.png"
 import MailingList from "../images/icons/mail-list.png"
@@ -59,13 +59,16 @@ const Showcase = styled.div`
 const About = styled.div`
   background: #f8f9fa;
   .body {
-    margin: 9rem 0;
+    margin: 3rem 0;
   }
   .flex {
     display: flex;
   }
+  .img-fluid {
+    width: 800px;
+  }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1124px) {
     .flex {
       flex-direction: column-reverse;
     }
@@ -74,7 +77,11 @@ const About = styled.div`
       margin: 0;
       padding: 2rem;
     }
+    .center {
+      margin: 0 auto;
+    }
   }
+
 `
 
 const Services = styled.div`
@@ -88,29 +95,38 @@ const Services = styled.div`
   .serviceCard {
     width: 150px;
     margin: 0 0.5rem;
+
+    h5 {
+      margin-top: 1rem;
+    }
   }
 `
 
 const Work = styled.div`
   padding: 4rem 0;
 
-  img {
-    max-width: 50%;
-    border-radius: 1rem;
+  .workImage {
+    width: 50%;
+    
+    img {
+      border-radius: 1rem;
+    }
   }
 
   .WorkWrapper {
     display: flex;
+    width: 100%;
   }
 
   .WorkTextWrapper {
+    width: 50%;
     margin-left: 3rem;
   }
 
   @media (max-width: 768px) {
     text-align: center;
-    img {
-      max-width: 100%;
+    .workImage {
+      width: 100%;
     }
 
     .WorkWrapper {
@@ -119,6 +135,8 @@ const Work = styled.div`
 
     .WorkTextWrapper {
       margin-left: 0rem;
+      margin-top: 3rem;
+      width: 100%;
     }
   }
 `
@@ -140,8 +158,8 @@ const IndexPage = ({ data }) => (
     <About>
       <Container>
         <div className="flex">
-          <div>
-            <img src={MockUp} alt="website mockup" />
+          <div className="center img-fluid">
+            <Img fluid={data.mockupImage.childImageSharp.fluid} alt="website mockup"/>
           </div>
           <div className="body">
             <h2>Boutique Web Design Agency</h2>
@@ -166,23 +184,23 @@ const IndexPage = ({ data }) => (
         <p className="subHeader">Set your business apart</p>
         <div className="serviceCards">
           <div className="serviceCard">
-            <img src={HealthCheck} alt="Health Check" />
+            <Img fluid={data.healthCheck.childImageSharp.fluid} alt="Health Check" />
             <h5>Health Check</h5>
           </div>
           <div className="serviceCard">
-            <img src={WebDesign} alt="Website Design" />
+            <Img fluid={data.webDesign.childImageSharp.fluid} alt="Website Design" />
             <h5>Website Design</h5>
           </div>
           <div className="serviceCard">
-            <img src={MailingList} alt="Mailing List" />
+            <Img fluid={data.mailingList.childImageSharp.fluid} alt="Mailing List" />
             <h5>Mailing List</h5>
           </div>
           <div className="serviceCard">
-            <img src={Cms} alt="CMS" />
+            <Img fluid={data.cms.childImageSharp.fluid} alt="CMS" />
             <h5>Content Management</h5>
           </div>
           <div className="serviceCard">
-            <img src={Seo} alt="SEO" />
+            <Img fluid={data.seo.childImageSharp.fluid} alt="SEO" />
             <h5>SEO</h5>
           </div>
         </div>
@@ -194,7 +212,9 @@ const IndexPage = ({ data }) => (
     <Work>
       <Container>
         <div className="WorkWrapper">
-          <img src={WorkExample} alt="Portfolio Example" />
+          <div className="workImage">
+            <Img fluid={data.workImage.childImageSharp.fluid} alt="Portfolio Example" />
+          </div>
           <div className="WorkTextWrapper">
             <h2>Some of Our Happy Customers</h2>
             <p>
@@ -214,6 +234,63 @@ const IndexPage = ({ data }) => (
 
 export const metaQuery = graphql`
   query {
+    mockupImage: file(relativePath: {regex: "/bridge-lane-mockup.png/"}) {
+      id
+      childImageSharp {
+        fluid (maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    healthCheck: file(relativePath: {regex: "/health-check.png/"}) {
+      id
+      childImageSharp {
+        fluid (maxWidth: 150) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    webDesign: file(relativePath: {regex: "/design.png/"}) {
+      id
+      childImageSharp {
+        fluid (maxWidth: 150) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mailingList: file(relativePath: {regex: "/mail-list.png/"}) {
+      id
+      childImageSharp {
+        fluid (maxWidth: 150) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    cms: file(relativePath: {regex: "/cms.png/"}) {
+      id
+      childImageSharp {
+        fluid (maxWidth: 150) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    seo: file(relativePath: {regex: "/seo.png/"}) {
+      id
+      childImageSharp {
+        fluid (maxWidth: 150) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    workImage: file(relativePath: {regex: "/kurrajong-hotel-mockup-2.png/"}) {
+      id
+      childImageSharp {
+        fluid (maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
     site {
       siteMetadata {
         title

@@ -16,8 +16,32 @@ const Blog = styled.div`
   h1 {
     font-size: 2.2rem;
   }
-  h6 {
-    font-size: 1rem;
+
+  blockquote {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1.5em 0;
+    padding: 0.5em 10px;
+    line-height: 2.5rem;
+    font-style: italic;
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
   }
 
   @media (max-width: 768px) {
@@ -34,9 +58,9 @@ export default function PostTemplate({ data }) {
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <Container>
         <div>
-          <Img fluid={featuredImgFluid} style={{maxHeight: "400px", width: "100%"}}/>
-          {/* <div dangerouslySetInnerHTML={{ __html: post.tableOfContents}} /> */}
           <h1 style={{textAlign: "center", marginTop: "3rem"}}>{post.frontmatter.title}</h1>
+          <Img fluid={featuredImgFluid} style={{maxHeight: "400px", width: "100%", marginBottom: "3rem"}}/>
+          {/* <div dangerouslySetInnerHTML={{ __html: post.tableOfContents}} /> */}
           <Blog dangerouslySetInnerHTML={{ __html: post.html }} />
           <h6 style={{ paddingLeft: "2rem" }}>
             Posted by {post.frontmatter.author} on {post.frontmatter.date}

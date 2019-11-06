@@ -39,7 +39,7 @@ const BlogPage = ({ data }) => {
             <Link to={post.node.frontmatter.path}>
               <h3>
                 {post.node.frontmatter.title}{" "}
-                <span style={{ color: "gray", fontSize: "1rem" }}>
+                <span style={{ color: "#555", fontSize: "1rem" }}>
                   - {post.node.frontmatter.date}
                 </span>
               </h3>
