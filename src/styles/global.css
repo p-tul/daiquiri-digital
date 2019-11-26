@@ -44,13 +44,16 @@ template {
   display: none;
 }
 a {
+  color: #8d6c12;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
 }
 a:active,
 a:hover {
+  color: #a58d49;
   outline-width: 0;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: none;
@@ -318,7 +321,7 @@ h6 {
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  /* font-size: 1rem; */
   line-height: 1.4;
 }
 hgroup {

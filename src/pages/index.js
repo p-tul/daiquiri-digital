@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from 'gatsby-background-image'
 
 // COMPONENTS
 import Layout from "../components/layout"
@@ -141,6 +142,48 @@ const Work = styled.div`
   }
 `
 
+// Background Image
+// const BackgroundSection =({className}) => (
+//   <StaticQuery
+//     query={graphql`
+//       query {
+//         desktop: file(relativePath: {regex: "/showcase-img.png/"}) {
+//           childImageSharp {
+//             fluid(quality: 90, maxWidth: 1920) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={data => {
+//       // Set ImageData.
+//       // const imageData = data.desktop.childImageSharp.fluid
+//       return (
+//         <BackgroundImage
+//           Tag="section"
+//           className={className}
+//           fluid={data.desktop.childImageSharp.fluid}
+//           backgroundColor={`#040e18`}
+//         >
+//           <h1>Hello gatsby-background-image</h1>
+//         </BackgroundImage>
+//       )
+//     }}
+//   />
+// )
+
+// const StyledBackgroundSection = styled(BackgroundSection)`
+//   width: 100%;
+//   background-position: bottom center;
+//   background-repeat: repeat-y;
+//   background-size: cover;
+// `
+
+
+
+
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title={data.site.siteMetadata.title} />
@@ -154,6 +197,8 @@ const IndexPage = ({ data }) => (
         </h1>
       </Container>
     </Showcase>
+
+    {/* <StyledBackgroundSection /> */}
 
     <About>
       <Container>

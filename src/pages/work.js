@@ -69,6 +69,7 @@ const WorkPage = () => (
     <Container>
         <StyledHeader style={{textAlign: "center"}}>
             <h1>Our Work</h1>
+            <p>We are very proud of the work we do and loving showing off whenever we can.</p>
             <hr/>
         </StyledHeader>
         <PortfolioWrapper>
