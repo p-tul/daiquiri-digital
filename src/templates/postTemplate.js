@@ -51,7 +51,7 @@ const Blog = styled.div`
 
 export default function PostTemplate({ data }) {
   const post = data.markdownRemark
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
 
   return (
     <Layout>
@@ -60,7 +60,6 @@ export default function PostTemplate({ data }) {
         <div>
           <h1 style={{textAlign: "center", marginTop: "3rem"}}>{post.frontmatter.title}</h1>
           <Img fluid={featuredImgFluid} style={{maxHeight: "400px", width: "100%", marginBottom: "3rem"}}/>
-          {/* <div dangerouslySetInnerHTML={{ __html: post.tableOfContents}} /> */}
           <Blog dangerouslySetInnerHTML={{ __html: post.html }} />
           <h6 style={{ paddingLeft: "2rem" }}>
             Posted by {post.frontmatter.author} on {post.frontmatter.date}
@@ -76,10 +75,6 @@ export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-      tableOfContents (
-        pathToSlugField: "frontmatter.path"
-        maxDepth: 2
-      )
       frontmatter {
         path
         title

@@ -5,7 +5,7 @@ updated: ''
 author: Patrick Tully
 published: false
 path: '/blog/why-every-venue-needs-a-dedicated-website'
-featuredImage: './'
+featuredImage: './table.jpg'
 ---
 
 I'll keep this brief. Every venue needs a website.
