@@ -1,7 +1,7 @@
 ---
 title: 'When to DIY and When to Hire a Professional Web Developer'
 date: '2019-10-30'
-updated: ''
+updated: '2019-12-4'
 author: Patrick Tully
 published: true
 path: '/blog/dit-or-hire-a-pro'
