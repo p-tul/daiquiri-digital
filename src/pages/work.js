@@ -8,42 +8,42 @@ import Container from '../components/container'
 import ContactBanner from '../components/contactBanner'
 
 // IMAGES
-import KurraMockup from '../images/kurrajong-hotel-mockup.png'
-import CinDavies from '../images/cin-davies-mockup.png'
-import BridgeLane from '../images/bridge-lane-mockup.png'
+import Kurrajong from '../images/kurrajong.png'
+import CinDavies from '../images/cin-davies.png'
+import BridgeLane from '../images/bridge-lane.png'
+import Quaintrelle from '../images/quaintrelle.png'
+import HartsPub from '../images/harts-pub.png'
+import Gurdys from '../images/gurdys.png'
+import PMBC from '../images/pmbc.png'
+import SpiritsLedger from '../images/spirits-ledger.png'
+
 
 // STYLED COMPONENTS
 const PortfolioWrapper = styled.div`
-    display: flex;
-    flex: 1 1 1;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
+    gap: 3rem;
+    align-items: center;
 `
 
 const PortfilioItem = styled.div`
-    margin: 1rem;
     text-align: center;
-    width: 33.333%;
-
-    background: #f3f3f3;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    -webkit-box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
-    -moz-box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
-    box-shadow: 0px 7px 11px 4px rgba(189,189,189,0.3);
     transition: transform 100ms;
-    
+    padding: 1px;
+    background: ${props => props.dark ? '#222' : ''};
+
+    img {
+        max-height: 200px;
+    }
+
+    h2 {
+        display: none;
+    }
+
     :hover {
-        transform: scale(1.01);                
-    }
 
-    @media (max-width: 768px) {
-        width: 100%;
-        margin: 1rem 0;
     }
-
 `
 
 const StyledHeader = styled.div`
@@ -74,8 +74,38 @@ const WorkPage = () => (
         </StyledHeader>
         <PortfolioWrapper>
             <PortfilioItem>
+                <a href="https://quaintrellecandles.com.au/" target="_blank" rel="noopener noreferrer" >
+                    <img src={Quaintrelle} alt="Quaintrelle" />
+                </a>
+                <h2>Quaintrelle</h2>
+            </PortfilioItem>
+            <PortfilioItem dark>
+                <a href="https://spiritsledger.com.au/" target="_blank" rel="noopener noreferrer" >
+                    <img src={SpiritsLedger} alt="Spirits Ledger" />
+                </a>
+                <h2>Spirits Ledger</h2>
+            </PortfilioItem>
+            <PortfilioItem>
+                <a href="https://www.pickledmonkey.beer/" target="_blank" rel="noopener noreferrer" >
+                    <img src={PMBC} alt="Pickled Monkey Brewing Co" />
+                </a>
+                <h2>Pickled Monkey Brewing Co</h2>
+            </PortfilioItem>
+            <PortfilioItem>
+                <a href="https://gurdys.com.au/" target="_blank" rel="noopener noreferrer" >
+                    <img src={Gurdys} alt="Gurdys" />
+                </a>
+                <h2>Gurdys</h2>
+            </PortfilioItem>
+            <PortfilioItem>
+                <a href="https://www.hartspub.com.au/" target="_blank" rel="noopener noreferrer" >
+                    <img src={HartsPub} alt="Harts Pub" />
+                </a>
+                <h2>Harts Pub</h2>
+            </PortfilioItem>
+            <PortfilioItem>
                 <a href="http://www.kurrajonghotel.com.au" target="_blank" rel="noopener noreferrer" >
-                    <img src={KurraMockup} alt="Kurrajong Hotel" />
+                    <img src={Kurrajong} alt="Kurrajong Hotel" />
                 </a>
                 <h2>Kurrajong Hotel</h2>
             </PortfilioItem>

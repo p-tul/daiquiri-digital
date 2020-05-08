@@ -9,7 +9,7 @@ const Container = ({children}) => {
                 padding: ` 1.45rem 1.0875rem`,
             }}
         >
-        <main>{children}</main>
+        {children}
       </div>
     )
 }

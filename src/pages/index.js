@@ -142,139 +142,97 @@ const Work = styled.div`
   }
 `
 
-// Background Image
-// const BackgroundSection =({className}) => (
-//   <StaticQuery
-//     query={graphql`
-//       query {
-//         desktop: file(relativePath: {regex: "/showcase-img.png/"}) {
-//           childImageSharp {
-//             fluid(quality: 90, maxWidth: 1920) {
-//               ...GatsbyImageSharpFluid_withWebp
-//             }
-//           }
-//         }
-//       }
-//     `}
-//     render={data => {
-//       // Set ImageData.
-//       // const imageData = data.desktop.childImageSharp.fluid
-//       return (
-//         <BackgroundImage
-//           Tag="section"
-//           className={className}
-//           fluid={data.desktop.childImageSharp.fluid}
-//           backgroundColor={`#040e18`}
-//         >
-//           <h1>Hello gatsby-background-image</h1>
-//         </BackgroundImage>
-//       )
-//     }}
-//   />
-// )
-
-// const StyledBackgroundSection = styled(BackgroundSection)`
-//   width: 100%;
-//   background-position: bottom center;
-//   background-repeat: repeat-y;
-//   background-size: cover;
-// `
-
-
-
 
 
 const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title={data.site.siteMetadata.title} />
+	<Layout>
+		<SEO title={data.site.siteMetadata.title} />
 
-    <Showcase>
-      <Container>
-        <h1>
-          <span style={{ color: "#7ed957" }}>Hospitality</span>
-          <br />
+		<Showcase>
+			<Container>
+				<h1>
+					<span style={{ color: "#7ed957" }}>Hospitality</span>
+					<br />
           Web Design
         </h1>
-      </Container>
-    </Showcase>
+			</Container>
+		</Showcase>
 
-    {/* <StyledBackgroundSection /> */}
-
-    <About>
-      <Container>
-        <div className="flex">
-          <div className="center img-fluid">
-            <Img fluid={data.mockupImage.childImageSharp.fluid} alt="website mockup"/>
-          </div>
-          <div className="body">
-            <h2>Boutique Web Design Agency</h2>
-            <p>
-              Whether you are just starting and need a new website or you want
-              to improve your current site, we understand the requirements of
-              small business and ensure you put your best foot forward online.
+		<About>
+			<Container>
+				<div className="flex">
+					<div className="center img-fluid">
+						<Img fluid={data.mockupImage.childImageSharp.fluid} alt="website mockup" />
+					</div>
+					<div className="body">
+						<h2>Boutique Web Design Agency</h2>
+						<p>
+							Whether you are just starting and need a new website or you want
+							to improve your current site, we understand the requirements of
+							small business and ensure you put your best foot forward online.
             </p>
-            <p>
-              We specialise in all forms of hospitality business and know what
-              is involved in separating your business from the rest.
+						<p>
+							We specialise in all forms of hospitality business and know what
+							is involved in separating your business from the rest.
             </p>
-            <p>You take care of your guests and we'll take care of you.</p>
-          </div>
-        </div>
-      </Container>
-    </About>
+						<p>You take care of your guests and we'll take care of you.</p>
+					</div>
+				</div>
+			</Container>
+		</About>
 
-    <Services>
-      <Container>
-        <h2>Services</h2>
-        <p className="subHeader">Set your business apart</p>
-        <div className="serviceCards">
-          <div className="serviceCard">
-            <Img fluid={data.healthCheck.childImageSharp.fluid} alt="Health Check" />
-            <h5>Health Check</h5>
-          </div>
-          <div className="serviceCard">
-            <Img fluid={data.webDesign.childImageSharp.fluid} alt="Website Design" />
-            <h5>Website Design</h5>
-          </div>
-          <div className="serviceCard">
-            <Img fluid={data.mailingList.childImageSharp.fluid} alt="Mailing List" />
-            <h5>Mailing List</h5>
-          </div>
-          <div className="serviceCard">
-            <Img fluid={data.cms.childImageSharp.fluid} alt="CMS" />
-            <h5>Content Management</h5>
-          </div>
-          <div className="serviceCard">
-            <Img fluid={data.seo.childImageSharp.fluid} alt="SEO" />
-            <h5>SEO</h5>
-          </div>
-        </div>
-        <br />
-        <Button path="/pricing" text="View Pricing" />
-      </Container>
-    </Services>
+		<Services>
+			<Container>
+				<h2>Services</h2>
+				<p className="subHeader">Set your business apart</p>
+				<div className="serviceCards">
+					<div className="serviceCard">
+						<Img fluid={data.healthCheck.childImageSharp.fluid} alt="Health Check" />
+						<h5>Health Check</h5>
+					</div>
+					<div className="serviceCard">
+						<Img fluid={data.webDesign.childImageSharp.fluid} alt="Website Design" />
+						<h5>Website Design</h5>
+					</div>
+					<div className="serviceCard">
+						<Img fluid={data.mailingList.childImageSharp.fluid} alt="Mailing List" />
+						<h5>Mailing List</h5>
+					</div>
+					<div className="serviceCard">
+						<Img fluid={data.cms.childImageSharp.fluid} alt="CMS" />
+						<h5>Content Management</h5>
+					</div>
+					<div className="serviceCard">
+						<Img fluid={data.seo.childImageSharp.fluid} alt="SEO" />
+						<h5>SEO</h5>
+					</div>
+				</div>
+				<br />
+				{/* <Button path="/pricing" text="View Pricing" /> */}
+			</Container>
+		</Services>
 
-    <Work>
-      <Container>
-        <div className="WorkWrapper">
-          <div className="workImage">
-            <Img fluid={data.workImage.childImageSharp.fluid} alt="Portfolio Example" />
-          </div>
-          <div className="WorkTextWrapper">
-            <h2>Some of Our Happy Customers</h2>
-            <p>
-              We are very proud of work so we shamelessly show it off and we'd
-              love to show you off too.
+		<Work>
+			<Container>
+				<div className="WorkWrapper">
+					<div className="workImage">
+						<Img fluid={data.workImage.childImageSharp.fluid} alt="Portfolio Example" />
+					</div>
+					<div className="WorkTextWrapper">
+						<h2>Some of Our Happy Customers</h2>
+						<p>
+							We are very proud of work so we shamelessly show it off and we'd
+							love to show you off too.
             </p>
-            <br />
-            <Button path="/work" text="View Portfolio" />
-          </div>
-        </div>
-      </Container>
-    </Work>
+						<br />
+						<Button path="/work" text="View Portfolio" />
+					</div>
+				</div>
+			</Container>
+		</Work>
 
-    <ContactBanner />
-  </Layout>
+		<ContactBanner />
+	</Layout>
 )
 
 export const metaQuery = graphql`

@@ -7,7 +7,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
     "bootstrap": "^4.3.1",
-    "gatsby": "^2.15.29",
+    "gatsby": "^2.21.19",
     "gatsby-background-image": "^0.8.15",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-facebook-pixel": "^1.0.3",
