@@ -3,28 +3,6 @@ A digital design & development agency focused on the hospitality industry. View 
 
 ---
 
-## File Structure
-
-daiquir-digital
-|-- src
-|   |-- components
-|   |-- images
-|   |-- pages
-|   |   |-- articles
-|   |   |   |-- article-1
-|   |   |   |-- article-2
-|   |   |   |-- article-...
-|   |   |-- wip
-|   |-- styles
-|   |-- templates
-|   |-- utils
-|
-|-- public
-|-- node_modules
-|-- .cache
-
----
-
 ## Blog Posts
 Markdown files contained within **src/pages/articles/...**
 
