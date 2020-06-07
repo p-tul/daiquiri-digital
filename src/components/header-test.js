@@ -20,7 +20,7 @@ const LogoLink = styled.img`
 
 const NavLink = styled(Link)`
   color: #4e4e4e;
-  textdecoration: none;
+  text-decoration: none;
   padding: 4px;
   line-height: 1.5;
   padding: 0.5rem;

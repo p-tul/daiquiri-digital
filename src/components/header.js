@@ -63,7 +63,7 @@ const NavItem = styled.li`
 
 const NavLink = styled(Link)`
   color: black;
-  textdecoration: none;
+  text-decoration: none;
   padding: 4px;
 `
 
