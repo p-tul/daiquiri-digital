@@ -7,9 +7,11 @@ import BackgroundImage from 'gatsby-background-image'
 // COMPONENTS
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Showcase from '../components/Showcase'
+import Services from '../components/Services'
 import Container from "../components/container"
-import Button from "../components/button"
-import ContactBanner from "../components/contactBanner"
+import Button from "../components/Button"
+import ContactBanner from "../components/ContactBanner"
 
 // IMAGES
 import BackgroundImg from "../images/showcase-img.png"
@@ -22,41 +24,6 @@ import Seo from "../images/icons/seo.png"
 import WorkExample from "../images/kurrajong-hotel-mockup-2.png"
 
 // STYLED COMPONENTS
-const Showcase = styled.div`
-  background: url(${BackgroundImg}) center center no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: calc(100vh - 100px);
-  h1 {
-    padding-top: 12rem;
-    font-size: 5rem;
-    font-weight: bold;
-    font-style: italic;
-  }
-
-  @media (max-width: 768px) {
-    height: 30vh;
-    h1 {
-      padding-top: 1rem;
-      font-size: 3rem;
-    }
-  }
-
-  @media (max-width: 655px) {
-    h1 {
-      font-size: 2.5rem;
-      padding-top: 2rem;
-    }
-  }
-
-  @media (max-width: 428px) {
-    h1 {
-      font-size: 2rem;
-      padding-top: 4rem;
-    }
-  }
-`
-
 const About = styled.div`
   background: #f8f9fa;
   .body {
@@ -83,24 +50,6 @@ const About = styled.div`
     }
   }
 
-`
-
-const Services = styled.div`
-  text-align: center;
-  padding: 4rem 0;
-  .serviceCards {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  .serviceCard {
-    width: 150px;
-    margin: 0 0.5rem;
-
-    h5 {
-      margin-top: 1rem;
-    }
-  }
 `
 
 const Work = styled.div`
@@ -148,15 +97,7 @@ const IndexPage = ({ data }) => (
 	<Layout>
 		<SEO title={data.site.siteMetadata.title} />
 
-		<Showcase>
-			<Container>
-				<h1>
-					<span style={{ color: "#7ed957" }}>Hospitality</span>
-					<br />
-          Web Design
-        </h1>
-			</Container>
-		</Showcase>
+		<Showcase />
 
 		<About>
 			<Container>
@@ -181,36 +122,7 @@ const IndexPage = ({ data }) => (
 			</Container>
 		</About>
 
-		<Services>
-			<Container>
-				<h2>Services</h2>
-				<p className="subHeader">Set your business apart</p>
-				<div className="serviceCards">
-					<div className="serviceCard">
-						<Img fluid={data.healthCheck.childImageSharp.fluid} alt="Health Check" />
-						<h5>Health Check</h5>
-					</div>
-					<div className="serviceCard">
-						<Img fluid={data.webDesign.childImageSharp.fluid} alt="Website Design" />
-						<h5>Website Design</h5>
-					</div>
-					<div className="serviceCard">
-						<Img fluid={data.mailingList.childImageSharp.fluid} alt="Mailing List" />
-						<h5>Mailing List</h5>
-					</div>
-					<div className="serviceCard">
-						<Img fluid={data.cms.childImageSharp.fluid} alt="CMS" />
-						<h5>Content Management</h5>
-					</div>
-					<div className="serviceCard">
-						<Img fluid={data.seo.childImageSharp.fluid} alt="SEO" />
-						<h5>SEO</h5>
-					</div>
-				</div>
-				<br />
-				{/* <Button path="/pricing" text="View Pricing" /> */}
-			</Container>
-		</Services>
+		<Services />
 
 		<Work>
 			<Container>

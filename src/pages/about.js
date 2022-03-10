@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from '../components/container'
-import ContactBanner from '../components/contactBanner'
+import ContactBanner from '../components/ContactBanner'
 
 // IMAGES
 import Banner from '../images/citrus-cocktail.jpg'

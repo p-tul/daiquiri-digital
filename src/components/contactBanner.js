@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from './container'
-import Button from './button'
+import Button from './Button'
 
 
 const Contact = styled.div`
